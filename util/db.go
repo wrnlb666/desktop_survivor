@@ -8,11 +8,11 @@ import (
 
 	_   "embed"
 
-    "survivor/sqlc"
     "survivor/ui"
+    "survivor/sqlc"
 
-	rl  "github.com/gen2brain/raylib-go/raylib"
 	_   "github.com/glebarez/go-sqlite"
+	rl  "github.com/gen2brain/raylib-go/raylib"
 )
 
 
@@ -25,12 +25,12 @@ func DBExist() bool {
     _, err := os.Stat("desktop_survivor.db")
     if err != nil {
         if errors.Is(err, os.ErrNotExist) {
-            return false
+            return true
         }
         rl.TraceLog(rl.LogFatal, err.Error())
         os.Exit(1)
     }
-    return true
+    return false
 }
 
 
