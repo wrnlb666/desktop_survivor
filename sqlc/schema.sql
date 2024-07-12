@@ -4,8 +4,8 @@ CREATE TABLE IF NOT EXISTS global (
     should_close    BOOL NOT NULL,                      -- if the game should be closed
 
     -- screen size
-    screen_width    INTEGER NOT NULL,                   -- screen width
-    screen_height   INTEGER NOT NULL                    -- screen height
+    screen_width    FLOAT NOT NULL,                     -- screen width
+    screen_height   FLOAT NOT NULL                      -- screen height
 );
 
 
